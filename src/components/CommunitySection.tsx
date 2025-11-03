@@ -1,39 +1,26 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Users, CheckCircle2, Heart } from "lucide-react";
-import communityImage from "@/assets/community-chat.png";
+import { MessageCircle, Users, CheckCircle2 } from "lucide-react";
 
 const CommunitySection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-accent/10">
+    <section className="py-20">
       <div className="container">
         <div className="text-center space-y-4 mb-12">
-          <div className="inline-block px-4 py-2 bg-accent/20 rounded-full mb-4">
-            <span className="text-sm font-semibold text-accent-foreground">💬 COMMUNITY</span>
-          </div>
-          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-            Your Study <span className="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">Squad</span> Awaits
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            Never Get Stuck — Learn Together
           </h2>
           <p className="text-lg text-muted-foreground max-w-[700px] mx-auto">
-            Stuck on a concept? Drop a question and get answers from faculty + 10k students. We got your back! 🤝
+            Ask questions, clear your doubts, and interact with mentors and peers in our student community. Get answers fast, stay confident.
           </p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-2 max-w-6xl mx-auto items-center">
-          <div className="relative order-2 lg:order-1">
-            <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/20 rounded-3xl blur-2xl animate-pulse" />
-            <img
-              src={communityImage}
-              alt="Community Discussion"
-              className="relative rounded-3xl shadow-2xl"
-            />
-          </div>
-
-          <div className="space-y-6 order-1 lg:order-2">
-            <Card className="p-6 border-2 border-accent/20 hover:border-accent/40 transition-colors">
-              <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+        <div className="grid gap-8 lg:grid-cols-2 max-w-6xl mx-auto">
+          <div className="space-y-6">
+            <Card className="p-6">
+              <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
                 <MessageCircle className="h-5 w-5 text-primary" />
-                Hot Topics 🔥
+                Recent Discussions
               </h3>
               <div className="space-y-4">
                 <div className="p-4 bg-accent rounded-lg">

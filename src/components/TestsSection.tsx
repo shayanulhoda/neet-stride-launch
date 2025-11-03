@@ -1,51 +1,36 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { BarChart3, Clock, Target, TrendingUp, Zap } from "lucide-react";
-import testAnalytics from "@/assets/test-analytics.png";
+import { BarChart3, Clock, Target, TrendingUp } from "lucide-react";
 
 const TestsSection = () => {
   return (
-    <section id="tests" className="py-20 relative overflow-hidden">
-      {/* Floating gradient blob */}
-      <div className="absolute top-20 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-float" />
-      
-      <div className="container relative z-10">
+    <section id="tests" className="py-20">
+      <div className="container">
         <div className="text-center space-y-4 mb-12">
-          <div className="inline-block px-4 py-2 bg-primary/20 rounded-full mb-4">
-            <span className="text-sm font-semibold text-primary">🎯 MOCK TESTS</span>
-          </div>
-          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-            Practice Like It's the <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Real Deal</span>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            Test Your Knowledge with Real Exam Simulations
           </h2>
           <p className="text-lg text-muted-foreground max-w-[700px] mx-auto">
-            Realistic mock tests + instant results + detailed solutions = You crushing NEET 💪
+            Attempt topic-wise and full-length mock tests to assess your readiness. Get instant results with detailed analytics and explanations.
           </p>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-2 max-w-6xl mx-auto items-center">
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-3xl blur-2xl" />
-            <img
-              src={testAnalytics}
-              alt="Test Analytics"
-              className="relative rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-          
           <div className="space-y-6">
-            <Card className="p-6 bg-gradient-to-br from-primary/10 to-secondary/10 border-2 border-primary/20">
+            <Card className="p-6 bg-accent border-border">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xl font-bold">Recent Performance 📊</h3>
-                <TrendingUp className="h-6 w-6 text-primary animate-pulse" />
+                <h3 className="text-xl font-semibold">Recent Test Performance</h3>
+                <TrendingUp className="h-5 w-5 text-primary" />
               </div>
-              <div className="space-y-3">
-                <div className="flex items-center justify-between p-4 bg-background/80 backdrop-blur-sm rounded-xl border-2 border-primary/20 hover:border-primary/40 transition-colors">
+              
+              <div className="space-y-4">
+                <div className="flex items-center justify-between p-4 bg-background rounded-lg">
                   <div>
-                    <p className="font-bold">Physics Mock Test #12 ⚡</p>
+                    <p className="font-medium">Physics Mock Test #12</p>
                     <p className="text-sm text-muted-foreground">Completed 2 days ago</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-3xl font-black bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">85%</p>
+                    <p className="text-2xl font-bold text-primary">85%</p>
                     <p className="text-xs text-muted-foreground">Score</p>
                   </div>
                 </div>

@@ -9,43 +9,39 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 240 10% 15%;
+    --foreground: 220 15% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 15%;
+    --card-foreground: 220 15% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 15%;
+    --popover-foreground: 220 15% 20%;
 
-    --primary: 340 82% 52%;
+    --primary: 5 80% 52%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 280 65% 60%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 31 100% 95%;
+    --secondary-foreground: 220 15% 20%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215 20% 50%;
 
-    --accent: 45 100% 55%;
-    --accent-foreground: 240 10% 15%;
+    --accent: 31 100% 95%;
+    --accent-foreground: 5 80% 52%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 340 82% 52%;
+    --ring: 5 80% 52%;
 
-    --radius: 1rem;
+    --radius: 0.75rem;
     
-    /* Custom vibrant design tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(340, 82%, 52%) 0%, hsl(280, 65%, 60%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(280, 65%, 60%) 0%, hsl(260, 70%, 65%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(45, 100%, 55%) 0%, hsl(30, 100%, 60%) 100%);
-    --glow-primary: 0 8px 32px hsl(340 82% 52% / 0.3);
-    --glow-secondary: 0 8px 32px hsl(280 65% 60% / 0.3);
-    --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --card-shadow-hover: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    /* Custom design tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(5, 80%, 52%) 0%, hsl(15, 85%, 58%) 100%);
+    --card-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --card-shadow-hover: 0 10px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
@@ -66,33 +62,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 240 15% 8%;
+    --background: 220 20% 10%;
     --foreground: 0 0% 98%;
 
-    --card: 240 12% 12%;
+    --card: 220 18% 12%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 240 12% 12%;
+    --popover: 220 18% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 340 82% 52%;
+    --primary: 5 80% 52%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 280 65% 60%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 31 50% 25%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 240 15% 18%;
+    --muted: 220 15% 20%;
     --muted-foreground: 215 15% 65%;
 
-    --accent: 45 100% 55%;
-    --accent-foreground: 240 10% 15%;
+    --accent: 31 50% 25%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 15% 18%;
-    --input: 240 15% 18%;
-    --ring: 340 82% 52%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 5 80% 52%;
   }
 }
 
@@ -103,6 +99,5 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Poppins', sans-serif;
   }
 }

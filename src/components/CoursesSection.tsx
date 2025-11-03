@@ -1,8 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { BookOpen, FileText, Video, TrendingUp, ArrowRight } from "lucide-react";
+import { BookOpen, FileText, Video } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
-import studentsImage from "@/assets/students-studying.png";
 
 const courses = [
   {
@@ -10,107 +9,91 @@ const courses = [
     progress: 65,
     lessons: 48,
     duration: "24 hours",
-    category: "Physics",
-    emoji: "⚡"
+    category: "Physics"
   },
   {
     title: "Chemistry - Organic Chemistry",
     progress: 40,
     lessons: 52,
     duration: "28 hours",
-    category: "Chemistry",
-    emoji: "🧪"
+    category: "Chemistry"
   },
   {
     title: "Biology - Human Physiology",
     progress: 80,
     lessons: 45,
     duration: "22 hours",
-    category: "Biology",
-    emoji: "🧬"
+    category: "Biology"
   },
   {
     title: "Chemistry - Inorganic Chemistry",
     progress: 25,
     lessons: 38,
     duration: "20 hours",
-    category: "Chemistry",
-    emoji: "⚗️"
+    category: "Chemistry"
   },
 ];
 
 const CoursesSection = () => {
   return (
-    <section id="courses" className="py-20 bg-gradient-to-b from-secondary/10 to-background">
+    <section id="courses" className="py-20 bg-secondary/30">
       <div className="container">
         <div className="text-center space-y-4 mb-12">
-          <div className="inline-block px-4 py-2 bg-secondary/20 rounded-full mb-4">
-            <span className="text-sm font-semibold text-secondary">📚 COURSES</span>
-          </div>
-          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-            Learn from the <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Best Content</span>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            Learn from the Best – Anytime, Anywhere
           </h2>
           <p className="text-lg text-muted-foreground max-w-[700px] mx-auto">
-            Binge-worthy video lessons, downloadable notes, and chapter-wise breakdowns. It's like Netflix, but you actually learn stuff 📖
+            Browse structured NEET courses with chapter-wise videos, PDFs, and notes. Learn at your own pace with expert-curated study material.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
-          <div className="order-2 lg:order-1">
-            <img
-              src={studentsImage}
-              alt="Students learning together"
-              className="rounded-3xl shadow-2xl border-4 border-primary/20"
-            />
-          </div>
-          <div className="order-1 lg:order-2 grid gap-6">
-            {courses.map((course, index) => (
-              <Card key={index} className="p-6 hover:shadow-2xl transition-all duration-300 bg-card border-2 border-primary/10 hover:border-primary/30 hover:scale-105">
-                <div className="space-y-4">
-                  <div className="flex items-start justify-between">
-                    <div className="flex items-center gap-3">
-                      <span className="text-3xl">{course.emoji}</span>
-                      <div>
-                        <span className="inline-block px-3 py-1 text-xs font-bold bg-gradient-to-r from-primary/20 to-secondary/20 text-primary rounded-full mb-2">
-                          {course.category}
-                        </span>
-                        <h3 className="text-lg font-bold">{course.title}</h3>
-                      </div>
-                    </div>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 max-w-6xl mx-auto">
+          {courses.map((course, index) => (
+            <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300 bg-card border-border">
+              <div className="space-y-4">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <span className="inline-block px-3 py-1 text-xs font-medium bg-accent text-accent-foreground rounded-full mb-2">
+                      {course.category}
+                    </span>
+                    <h3 className="text-lg font-semibold">{course.title}</h3>
                   </div>
-
-                  <div className="space-y-2">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-muted-foreground font-medium">Progress</span>
-                      <span className="font-bold text-primary">{course.progress}%</span>
-                    </div>
-                    <Progress value={course.progress} className="h-3 bg-secondary/20" />
-                  </div>
-
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-1">
-                      <Video className="h-4 w-4 text-primary" />
-                      <span className="font-medium">{course.lessons} lessons</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <TrendingUp className="h-4 w-4 text-secondary" />
-                      <span className="font-medium">{course.duration}</span>
-                    </div>
-                  </div>
-
-                  <Button className="w-full" variant="default">
-                    Continue Learning 🚀
-                  </Button>
                 </div>
-              </Card>
-            ))}
-          </div>
+
+                <div className="space-y-2">
+                  <div className="flex justify-between text-sm">
+                    <span className="text-muted-foreground">Progress</span>
+                    <span className="font-medium">{course.progress}%</span>
+                  </div>
+                  <Progress value={course.progress} className="h-2" />
+                </div>
+
+                <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <div className="flex items-center gap-1">
+                    <Video className="h-4 w-4" />
+                    <span>{course.lessons} lessons</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <BookOpen className="h-4 w-4" />
+                    <span>{course.duration}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <FileText className="h-4 w-4" />
+                    <span>PDF Notes</span>
+                  </div>
+                </div>
+
+                <Button className="w-full" variant="default">
+                  Continue Learning
+                </Button>
+              </div>
+            </Card>
+          ))}
         </div>
 
-        <div className="text-center">
-          <Button variant="gradient" size="lg" className="group">
+        <div className="text-center mt-12">
+          <Button variant="outline" size="lg">
             Browse All Courses
-            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-2 transition-transform" />
           </Button>
         </div>
       </div>
